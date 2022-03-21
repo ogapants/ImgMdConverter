@@ -1,0 +1,26 @@
+{
+  "name": "ImgMdConverter",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "ImgMdConverter",
+  "icons": {
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gittub.com/*"
+      ],
+      "js": [
+        "script.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+    "clipboardRead"
+  ]
+}
